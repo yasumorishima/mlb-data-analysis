@@ -129,8 +129,6 @@ mlb-data-analysis/
 │   ├── ohtani_batting_analysis_2022.ipynb
 │   ├── mlb_home_run_race_2024.ipynb
 │   └── ohtani_injury_analysis_2023.ipynb
-├── images/
-│   └── visualization_examples.png
 ├── requirements.txt
 └── README.md
 ```
