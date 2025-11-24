@@ -2,3 +2,6 @@ pybaseball
 pandas
 matplotlib
 seaborn
+bar_chart_race
+numpy
+ffmpeg-python
