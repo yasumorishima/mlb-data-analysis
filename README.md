@@ -52,7 +52,7 @@ Animated bar chart race visualization of cumulative home runs during the 2024 ML
 mlb-data-analysis/
 ├── notebooks/
 │   ├── ohtani_batting_analysis_2022.ipynb
-│   ├── 
+│   ├── mlb_home_run_race_2024.ipynb
 │   └── 
 ├── requirements.txt
 └── README.md
