@@ -1,10 +1,10 @@
 # MLB Data Analysis
 
-Professional-grade MLB data analysis with focus on practical scouting, performance tracking, and injury prevention.
+Professional-grade MLB data analysis with focus on practical scouting, performance tracking, injury prevention, and image analysis.
 
 ## 🎯 Project Overview
 
-This project demonstrates practical data analysis skills through real-world baseball analytics. All analyses use Python and MLB Statcast data to extract actionable insights for player evaluation, strategic planning, and performance monitoring.
+This project demonstrates practical data analysis skills through real-world baseball analytics. All analyses use Python and MLB Statcast data to extract actionable insights for player evaluation, strategic planning, and performance monitoring. Includes both statistical analysis and computer vision techniques.
 
 ## 🛠️ Tech Stack
 
@@ -14,6 +14,8 @@ This project demonstrates practical data analysis skills through real-world base
 - **matplotlib / seaborn**: Statistical visualization
 - **bar_chart_race**: Animated visualizations
 - **numpy**: Numerical computing
+- **PIL (Pillow)**: Image processing
+- **scikit-learn**: Machine learning (KMeans clustering)
 - **Jupyter Notebook**: Interactive analysis environment
 
 ## 📊 Analysis Portfolio
@@ -55,7 +57,52 @@ This project demonstrates practical data analysis skills through real-world base
 
 ---
 
-### 2. [Shohei Ohtani Batting Analysis (2022)](./notebooks/ohtani_batting_analysis_2022.ipynb)
+### 2. [Trevor Bauer Set Position Image Analysis (2023)](./notebooks/bauer_set_position_analysis_2023.ipynb) ⭐ NEW - IMAGE PROCESSING
+
+**Real-world application**: Image-based analysis of pitcher's set position to detect potential "tells" or mechanical inconsistencies that batters might exploit.
+
+**Background:**
+In 2023, when Trevor Bauer (Yokohama DeNA BayStars) was hit hard in a game against Hiroshima, this analysis was conducted to investigate whether there were detectable differences in his set position across different pitch types.
+
+**Analysis Methodology:**
+
+**Image Processing Pipeline**
+1. Background removal (green field transparency using RGB thresholds)
+2. Frame-by-frame difference detection
+3. Pixel-level comparison across pitch types
+4. Statistical clustering of difference regions
+
+**Computer Vision Techniques**
+- RGB channel processing and alpha compositing
+- Image differencing with threshold-based filtering (threshold = 250)
+- K-means clustering (n_clusters=4) to identify regions of maximum variance
+- Visualization of difference hotspots with circular markers
+
+**Analysis Workflow**
+- Compare each pitch type's frames against the first frame of that pitch type
+- Extract pixels with significant differences (>250 RGB delta)
+- Cluster difference points to identify key body position variations
+- Visualize results with red highlighting and blue cluster centers
+
+**Tools:** Python, PIL (Pillow), NumPy, scikit-learn (KMeans), matplotlib
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yasumorishima/mlb-data-analysis/blob/main/notebooks/bauer_set_position_analysis_2023.ipynb)
+
+**Technical Stack:**
+- Image processing: PIL (Pillow), NumPy arrays
+- Machine learning: K-means clustering for spatial analysis
+- Data visualization: matplotlib with patches overlay
+
+**Manufacturing Applications:**
+This image processing methodology directly applies to:
+- **Automated visual inspection**: Defect detection on production lines
+- **Quality control**: Comparing products against reference standards
+- **Anomaly detection**: Identifying deviations from normal patterns
+- **Process monitoring**: Tracking visual changes over time
+
+---
+
+### 3. [Shohei Ohtani Batting Analysis (2022)](./notebooks/ohtani_batting_analysis_2022.ipynb)
 
 Comprehensive analysis of Shohei Ohtani's batting performance during his 2022 MVP season.
 
@@ -71,7 +118,7 @@ Comprehensive analysis of Shohei Ohtani's batting performance during his 2022 MV
 
 ---
 
-### 3. [MLB Home Run Race 2024](./notebooks/mlb_home_run_race_2024.ipynb)
+### 4. [MLB Home Run Race 2024](./notebooks/mlb_home_run_race_2024.ipynb)
 
 Animated visualization of the 2024 MLB home run race throughout the season.
 
@@ -90,7 +137,7 @@ Animated visualization of the 2024 MLB home run race throughout the season.
 
 ---
 
-### 4. [Shohei Ohtani Injury Precursor Analysis (2023)](./notebooks/ohtani_injury_analysis_2023.ipynb)
+### 5. [Shohei Ohtani Injury Precursor Analysis (2023)](./notebooks/ohtani_injury_analysis_2023.ipynb)
 
 Statistical analysis of pitching metrics to detect potential injury warning signs.
 
@@ -125,10 +172,11 @@ Statistical analysis of pitching metrics to detect potential injury warning sign
 ```
 mlb-data-analysis/
 ├── notebooks/
-│   ├── wbc_2023_sandoval_scouting.ipynb      # Featured analysis
-│   ├── ohtani_batting_analysis_2022.ipynb
-│   ├── mlb_home_run_race_2024.ipynb
-│   └── ohtani_injury_analysis_2023.ipynb
+│   ├── wbc_2023_sandoval_scouting.ipynb      # Pre-game scouting
+│   ├── bauer_set_position_analysis_2023.ipynb # Image analysis (NEW)
+│   ├── ohtani_batting_analysis_2022.ipynb    # Batting analysis
+│   ├── mlb_home_run_race_2024.ipynb          # Animation
+│   └── ohtani_injury_analysis_2023.ipynb     # Injury prediction
 ├── requirements.txt
 └── README.md
 ```
@@ -138,7 +186,7 @@ mlb-data-analysis/
 ### Installation
 
 ```bash
-pip install pybaseball pandas matplotlib seaborn bar_chart_race numpy jupyter
+pip install pybaseball pandas matplotlib seaborn bar_chart_race numpy jupyter pillow scikit-learn
 ```
 
 ### For bar_chart_race (Ubuntu/Debian):
@@ -167,6 +215,8 @@ print(player_data['pitch_type'].value_counts())
 ### Technical Skills
 - **Data Acquisition**: MLB Statcast API integration
 - **Statistical Analysis**: Mean, standard deviation, outlier detection
+- **Image Processing**: Background removal, pixel-level differencing, alpha compositing
+- **Machine Learning**: K-means clustering for spatial analysis
 - **Data Visualization**: Multi-plot layouts, heat maps, animations
 - **Time-Series Analysis**: Trend detection, baseline comparison
 - **Data Cleaning**: Handling missing values, data validation
@@ -177,12 +227,14 @@ print(player_data['pitch_type'].value_counts())
 - **Scouting Methodology**: Pre-game preparation, opponent analysis
 - **Performance Metrics**: ERA, batting average, spin rates, release points
 - **Injury Prevention**: Biomechanical marker interpretation
+- **Computer Vision**: Motion analysis, pattern recognition
 
 ### Business Applications
 - **Pre-Game Scouting**: Actionable intelligence for strategic planning
 - **Competitive Analysis**: Benchmarking against industry standards
 - **Trend Detection**: Early warning systems for performance degradation
 - **Data-Driven Decision Making**: Evidence-based recommendations
+- **Visual Inspection**: Automated quality control systems
 
 ## 🔬 Analysis Highlights
 
@@ -190,8 +242,8 @@ print(player_data['pitch_type'].value_counts())
 
 The Patrick Sandoval scouting report demonstrates **practical application of data analysis** for high-stakes decision making:
 
-**Problem**: Japan faces Mexico in WBC semifinals - need strategic edge
-**Solution**: Comprehensive data analysis of opposing pitcher
+**Problem**: Japan faces Mexico in WBC semifinals - need strategic edge  
+**Solution**: Comprehensive data analysis of opposing pitcher  
 **Outcome**: Actionable insights on pitch tendencies, vulnerable zones, strategic approach
 
 **Transferable to Business:**
@@ -200,12 +252,30 @@ The Patrick Sandoval scouting report demonstrates **practical application of dat
 - Risk assessment
 - Strategic planning under time pressure
 
+---
+
+### Computer Vision: Bauer Set Position Analysis
+
+The Trevor Bauer image analysis demonstrates **computer vision techniques** applied to sports:
+
+**Problem**: Pitcher getting hit hard - investigate mechanical tells  
+**Solution**: Image-based difference detection across pitch types  
+**Outcome**: Visual identification of body position variations
+
+**Transferable to Manufacturing:**
+- **Automated Visual Inspection**: Product defect detection
+- **Quality Control**: Reference-based comparison systems
+- **Anomaly Detection**: Statistical clustering of deviations
+- **Process Monitoring**: Frame-by-frame analysis of production
+
+---
+
 ### Injury Prevention Research
 
 The Ohtani 2023 analysis explores **predictive analytics** for injury prevention:
 
-**Hypothesis**: Can statistical anomalies in pitching metrics predict injury risk?
-**Method**: Multi-parameter tracking with ±2σ threshold detection
+**Hypothesis**: Can statistical anomalies in pitching metrics predict injury risk?  
+**Method**: Multi-parameter tracking with ±2σ threshold detection  
 **Application**: Early warning system for biomechanical stress
 
 **Transferable to Manufacturing:**
@@ -213,6 +283,8 @@ The Ohtani 2023 analysis explores **predictive analytics** for injury prevention
 - Quality control
 - Process monitoring
 - Anomaly detection systems
+
+---
 
 ## 💼 Professional Value
 
@@ -224,17 +296,25 @@ The Ohtani 2023 analysis explores **predictive analytics** for injury prevention
 - Proves data-driven decision-making capability
 - **Business Parallel**: Competitive intelligence, market analysis
 
-**2. Injury Prediction Analysis**
+**2. Bauer Image Analysis**
+- Exhibits computer vision and image processing skills
+- Shows ability to apply ML clustering to visual data
+- Demonstrates creative problem-solving with unstructured data
+- **Business Parallel**: Automated inspection, quality control, visual defect detection
+
+**3. Injury Prediction Analysis**
 - Exhibits predictive analytics methodology
 - Shows multi-variable monitoring capability
 - Demonstrates statistical rigor (±2σ methodology)
 - **Business Parallel**: Predictive maintenance, quality control
 
-**3. Animation & Visualization**
+**4. Animation & Visualization**
 - Proves ability to communicate data insights visually
 - Shows technical breadth (multiple libraries)
 - Demonstrates attention to presentation quality
 - **Business Parallel**: Executive dashboards, stakeholder reports
+
+---
 
 ## 🔗 References
 
@@ -242,9 +322,11 @@ The Ohtani 2023 analysis explores **predictive analytics** for injury prevention
 - [MLB Statcast Data](https://baseballsavant.mlb.com/)
 - [Baseball Savant - Patrick Sandoval](https://baseballsavant.mlb.com/savant-player/patrick-sandoval-663776)
 - [2023 World Baseball Classic](https://www.mlb.com/world-baseball-classic)
+- [scikit-learn KMeans](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html)
+- [Pillow (PIL) Documentation](https://pillow.readthedocs.io/)
 
 ---
 
-**Portfolio Purpose**: This project demonstrates practical data analysis capabilities with real-world applications, statistical rigor, and business value generation through actionable insights.
+**Portfolio Purpose**: This project demonstrates practical data analysis capabilities with real-world applications, statistical rigor, computer vision techniques, and business value generation through actionable insights.
 
-*Personal learning project showcasing data analysis, visualization, and strategic thinking skills.*
+*Personal learning project showcasing data analysis, image processing, visualization, and strategic thinking skills.
