@@ -16,20 +16,36 @@ This project analyzes MLB (Major League Baseball) data using Python. The goal is
 
 ## 📊 Analysis Contents
 
-1. **Pitcher Performance Analysis**
-   - Pitch type statistics
-   - ERA and K/9 analysis
-   - Season trends
+### [Shohei Ohtani Batting Analysis (2022)](./notebooks/ohtani_batting_analysis_2022.ipynb)
 
-2. **Batter Performance Analysis**
-   - Batting average by situation
-   - Home run trends
-   - On-base percentage analysis
+Analysis of Shohei Ohtani's batting performance in the 2022 season using pybaseball.
 
-3. **Team Performance Visualization**
-   - Win/loss records
-   - Run differential
-   - League standings
+**Key Features:**
+- Batted ball direction by pitch location
+- Hit distribution across different zones
+- Performance visualization
+
+**Tools:** pybaseball, pandas, matplotlib
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yasumorishima/mlb-data-analysis/blob/main/notebooks/ohtani_batting_analysis_2022.ipynb)
+
+---
+
+### [MLB Home Run Race 2024](./notebooks/mlb_home_run_race_2024.ipynb) ⭐ NEW
+
+Animated bar chart race visualization of cumulative home runs during the 2024 MLB season.
+
+**Key Features:**
+- Real-time home run race animation (bar chart race)
+- Top 10 home run leaders throughout the season
+- Regular season data only (March 20 - October 1, 2024)
+- Player name mapping from MLB IDs
+
+**Tools:** pybaseball, bar_chart_race, matplotlib, pandas
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yasumorishima/mlb-data-analysis/blob/main/notebooks/mlb_home_run_race_2024.ipynb)
+
+**Output:** MP4 animation file showing cumulative home run progression
 
 ## 📁 Project Structure
 ```
