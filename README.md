@@ -35,13 +35,9 @@ This project analyzes MLB (Major League Baseball) data using Python. The goal is
 ```
 mlb-data-analysis/
 ├── notebooks/
-│   ├── 01_data_collection.ipynb
-│   ├── 02_data_analysis.ipynb
-│   └── 03_visualization.ipynb
-├── data/
-│   └── sample_data.csv
-├── images/
-│   └── visualization_examples.png
+│   ├── ohtani_batting_analysis_2022.ipynb
+│   ├── 
+│   └── 
 ├── requirements.txt
 └── README.md
 ```
