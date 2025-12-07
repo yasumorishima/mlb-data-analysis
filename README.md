@@ -22,6 +22,8 @@ This project demonstrates practical data analysis skills through real-world base
 
 ### 1. [WBC 2023: Pre-Game Scouting Report - Patrick Sandoval](./notebooks/wbc_2023_sandoval_scouting.ipynb) ⭐ FEATURED
 
+![WBC 2023 Pre-Game Scouting Report - Patrick Sandoval](./docs/images/WBC 2023 Pre-Game Scouting Report - Patrick Sandoval.png)
+
 **Real-world application**: Pre-game scouting analysis of Mexico pitcher Patrick Sandoval conducted before the 2023 World Baseball Classic Japan vs. Mexico semifinal game.
 
 **Analysis Components:**
