@@ -57,7 +57,7 @@ This project demonstrates practical data analysis skills through real-world base
 
 ---
 
-### 2. [Trevor Bauer Set Position Image Analysis (2023)](./notebooks/bauer_set_position_analysis_2023.ipynb) ⭐ NEW - IMAGE PROCESSING
+### 2. [Trevor Bauer Set Position Image Analysis (2023)](./notebooks/bauer_set_position_analysis_2023.ipynb) ⭐ - IMAGE PROCESSING
 
 **Real-world application**: Image-based analysis of pitcher's set position to detect potential "tells" or mechanical inconsistencies that batters might exploit.
 
