@@ -23,7 +23,7 @@ This project demonstrates practical data analysis skills through real-world base
 
 ## 📊 Analysis Portfolio
 
-### 1. [WBC 2023: Pre-Game Scouting Report - Patrick Sandoval](./notebooks/wbc_2023_sandoval_scouting.ipynb) ⭐ FEATURED
+### 1. [WBC 2023: Pre-Game Scouting Report - Patrick Sandoval](./notebooks/wbc_2023_sandoval_scouting.ipynb)
 
 ![Sandoval Pitch Usage by Batter Side](./docs/image/sandoval_pitch_usage.png)
 *Key Finding: Against left-handed batters, Sandoval throws sliders 49.2% of the time - nearly half of all pitches.*
@@ -71,7 +71,7 @@ This project demonstrates practical data analysis skills through real-world base
 
 ---
 
-### 2. [Trevor Bauer Set Position Image Analysis (2023)](./notebooks/bauer_set_position_analysis_2023.ipynb) ⭐ - IMAGE PROCESSING
+### 2. [Trevor Bauer Set Position Image Analysis (2023)](./notebooks/bauer_set_position_analysis_2023.ipynb)
 
 ![Bauer Set Position Analysis](./docs/image/bauer_set_position.png)
 *Key Finding: K-means clustering detected potential "tells" in glove position across different pitch types.*
