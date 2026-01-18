@@ -25,7 +25,13 @@ This project demonstrates practical data analysis skills through real-world base
 
 ### 1. [WBC 2023: Pre-Game Scouting Report - Patrick Sandoval](./notebooks/wbc_2023_sandoval_scouting.ipynb) ⭐ FEATURED
 
-![WBC 2023 Pre-Game Scouting Report - Patrick Sandoval](./docs/image/WBC2023Pre-GameScoutingReport-PatrickSandoval.png)
+![Sandoval Pitch Usage by Batter Side](./docs/image/sandoval_pitch_usage.png)
+*Key Finding: Against left-handed batters, Sandoval throws sliders 49.2% of the time - nearly half of all pitches.*
+*(重要な発見: 左打者に対して、サンドバルはスライダーを49.2%の割合で投げる - ほぼ半分の投球)*
+
+![Sandoval Hit Distribution](./docs/image/sandoval_hit_distribution.png)
+*Key Finding: No left-handed batter hit a home run off Sandoval in the previous season.*
+*(重要な発見: 前シーズン、左打者は誰もサンドバルからホームランを打っていない)*
 
 **Real-world application**: Pre-game scouting analysis of Mexico pitcher Patrick Sandoval conducted before the 2023 World Baseball Classic Japan vs. Mexico semifinal game.
 
@@ -66,6 +72,10 @@ This project demonstrates practical data analysis skills through real-world base
 ---
 
 ### 2. [Trevor Bauer Set Position Image Analysis (2023)](./notebooks/bauer_set_position_analysis_2023.ipynb) ⭐ - IMAGE PROCESSING
+
+![Bauer Set Position Analysis](./docs/image/bauer_set_position.png)
+*Key Finding: K-means clustering detected potential "tells" in glove position across different pitch types.*
+*(重要な発見: K-meansクラスタリングにより、球種ごとのグラブ位置に癖がある可能性を検出)*
 
 **Real-world application**: Image-based analysis of pitcher's set position to detect potential "tells" or mechanical inconsistencies that batters might exploit.
 
@@ -121,6 +131,10 @@ This image processing methodology directly applies to:
 
 ### 3. [Shohei Ohtani Batting Analysis (2022)](./notebooks/ohtani_batting_analysis_2022.ipynb)
 
+![Ohtani Batting Heatmap](./docs/image/ohtani_batting_heatmap.png)
+*Key Finding: High concentration of hits through second base area - this likely explains why teams deployed the "Ohtani Shift" with defensive positioning in that zone.*
+*(重要な発見: セカンド付近を通るヒットが集中している - これがチームが「大谷シフト」でそのゾーンに守備を配置した理由と推測される)*
+
 Comprehensive analysis of Shohei Ohtani's batting performance during his 2022 MVP season.
 (大谷翔平の2022年MVP シーズンにおける打撃パフォーマンスの包括的分析)
 
@@ -137,6 +151,11 @@ Comprehensive analysis of Shohei Ohtani's batting performance during his 2022 MV
 ---
 
 ### 4. [MLB Home Run Race 2024](./notebooks/mlb_home_run_race_2024.ipynb)
+
+https://github.com/yasumorishima/mlb-data-analysis/raw/main/docs/image/mlb_hr_race_2024.mp4
+
+*Dynamic bar chart race showing the 2024 home run leaders throughout the season.*
+*(2024年シーズンを通じたホームランリーダーを示す動的バーチャートレース)*
 
 Animated visualization of the 2024 MLB home run race throughout the season.
 (2024年MLBシーズンを通じたホームラン競争のアニメーション可視化)
@@ -157,6 +176,10 @@ Animated visualization of the 2024 MLB home run race throughout the season.
 ---
 
 ### 5. [Shohei Ohtani Injury Precursor Analysis (2023)](./notebooks/ohtani_injury_analysis_2023.ipynb)
+
+![Ohtani Injury Precursor Analysis](./docs/image/ohtani_injury_analysis.png)
+*Key Finding: Combining multiple parameters (release position × spin rate) may reveal injury precursors - note the increasing outliers (outside ±2σ) as the season progressed.*
+*(重要な発見: 複数のパラメーターを組み合わせる（リリース位置×スピンレート）ことで、怪我の予兆が見える可能性がある - シーズン後半に向けて±2σ外の外れ値が増加している点に注目)*
 
 Statistical analysis of pitching metrics to detect potential injury warning signs.
 (潜在的な怪我の警告サインを検出するための投球指標の統計分析)
