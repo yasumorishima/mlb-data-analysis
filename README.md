@@ -141,7 +141,7 @@ Comprehensive analysis of Shohei Ohtani's batting performance during his 2022 MV
 
 ### 4. [MLB Home Run Race 2024](./notebooks/mlb_home_run_race_2024.ipynb)
 
-https://github.com/yasumorishima/mlb-data-analysis/raw/main/docs/image/mlb_hr_race_2024.mp4
+https://github.com/user-attachments/assets/c2f5565c-ba87-419a-aaa3-fdc993034a95
 
 *Dynamic bar chart race showing the 2024 home run leaders throughout the season.*
 *(2024年シーズンを通じたホームランリーダーを示す動的バーチャートレース)*
