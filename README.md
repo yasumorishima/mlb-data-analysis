@@ -9,6 +9,9 @@ This project demonstrates practical data analysis skills through real-world base
 
 (実際の野球分析を通じて実践的なデータ解析スキルを実証するプロジェクトです。Pythonと MLB Statcastデータを使用して、選手評価、戦略立案、パフォーマンスモニタリングのための実用的な洞察を抽出します。統計分析とコンピュータビジョン技術の両方を含みます。)
 
+**📌 Both Python (pandas) and SQL (DuckDB) versions available for key analyses.**
+**(主要な分析にはPython版とSQL版の両方を用意しています)**
+
 ## 🛠️ Tech Stack
 
 - **Python 3.x**
@@ -19,6 +22,7 @@ This project demonstrates practical data analysis skills through real-world base
 - **numpy**: Numerical computing
 - **PIL (Pillow)**: Image processing
 - **scikit-learn**: Machine learning (KMeans clustering)
+- **DuckDB**: In-process SQL database for analytical queries
 - **Jupyter Notebook**: Interactive analysis environment
 
 ## 📊 Analysis Portfolio
@@ -201,16 +205,43 @@ Statistical analysis of pitching metrics to detect potential injury warning sign
 
 ---
 
+## 🗃️ SQL Version (DuckDB)
+
+Each analysis (except Bauer image analysis) has a **SQL version** demonstrating database query skills.
+
+| Analysis | SQL Notebook | Key SQL Features |
+|----------|--------------|------------------|
+| **Ohtani Batting 2022** | [SQL Version](./notebooks/sql/ohtani_batting_analysis_2022_sql.ipynb) | `SELECT`, `WHERE`, `IN`, `GROUP BY`, CTEs |
+| **Sandoval Scouting** | [SQL Version](./notebooks/sql/wbc_2023_sandoval_scouting_sql.ipynb) | `JOIN`, `CASE WHEN`, Aggregate functions |
+| **HR Race 2024** | [SQL Version](./notebooks/sql/mlb_home_run_race_2024_sql.ipynb) | Window functions (`SUM() OVER`), `PIVOT` |
+| **Ohtani Injury 2023** | [SQL Version](./notebooks/sql/ohtani_injury_analysis_2023_sql.ipynb) | `AVG`, `STDDEV`, Anomaly detection (±2σ) |
+
+### SQL Skills Demonstrated:
+- **Data Filtering**: `WHERE`, `IN`, `IS NOT NULL`
+- **Aggregation**: `GROUP BY`, `COUNT`, `AVG`, `STDDEV`, `SUM`
+- **Window Functions**: `SUM() OVER (PARTITION BY ... ORDER BY ...)`
+- **Conditional Logic**: `CASE WHEN ... THEN ... ELSE ... END`
+- **Table Operations**: `JOIN`, `CROSS JOIN`, CTEs (`WITH` clause)
+- **Data Transformation**: Pivot operations, cumulative calculations
+
+---
+
 ## 📁 Project Structure
 
 ```
 mlb-data-analysis/
 ├── notebooks/
 │   ├── wbc_2023_sandoval_scouting.ipynb      # Pre-game scouting
-│   ├── bauer_set_position_analysis_2023.ipynb # Image analysis (NEW)
+│   ├── bauer_set_position_analysis_2023.ipynb # Image analysis
 │   ├── ohtani_batting_analysis_2022.ipynb    # Batting analysis
 │   ├── mlb_home_run_race_2024.ipynb          # Animation
-│   └── ohtani_injury_analysis_2023.ipynb     # Injury prediction
+│   ├── ohtani_injury_analysis_2023.ipynb     # Injury prediction
+│   └── sql/                                   # SQL versions (DuckDB)
+│       ├── ohtani_batting_analysis_2022_sql.ipynb
+│       ├── wbc_2023_sandoval_scouting_sql.ipynb
+│       ├── mlb_home_run_race_2024_sql.ipynb
+│       └── ohtani_injury_analysis_2023_sql.ipynb
+├── docs/image/                                # Analysis images
 ├── requirements.txt
 └── README.md
 ```
@@ -220,7 +251,7 @@ mlb-data-analysis/
 ### Installation
 
 ```bash
-pip install pybaseball pandas matplotlib seaborn bar_chart_race numpy jupyter pillow scikit-learn
+pip install pybaseball pandas matplotlib seaborn bar_chart_race numpy jupyter pillow scikit-learn duckdb
 ```
 
 ### For bar_chart_race (Ubuntu/Debian):
@@ -248,6 +279,8 @@ print(player_data['pitch_type'].value_counts())
 
 ### Technical Skills (技術スキル)
 - **Data Acquisition**: MLB Statcast API integration
+- **SQL Analytics**: DuckDB queries with CTEs, window functions, aggregations
+  - (SQL分析: CTE、ウィンドウ関数、集計を使用したDuckDBクエリ)
 - **Statistical Analysis**: Mean, standard deviation, outlier detection
   - (統計分析: 平均、標準偏差、外れ値検出)
 - **Image Processing**: Background removal, pixel-level differencing, alpha compositing
@@ -274,6 +307,7 @@ print(player_data['pitch_type'].value_counts())
 
 - [pybaseball Documentation](https://github.com/jldbc/pybaseball)
 - [MLB Statcast Data](https://baseballsavant.mlb.com/)
+- [DuckDB Documentation](https://duckdb.org/docs/)
 - [Baseball Savant - Patrick Sandoval](https://baseballsavant.mlb.com/savant-player/patrick-sandoval-663776)
 - [2023 World Baseball Classic](https://www.mlb.com/world-baseball-classic)
 - [scikit-learn KMeans](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html)

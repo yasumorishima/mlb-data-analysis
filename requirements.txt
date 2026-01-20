@@ -5,3 +5,6 @@ seaborn
 bar_chart_race
 numpy
 ffmpeg-python
+duckdb
+pillow
+scikit-learn
