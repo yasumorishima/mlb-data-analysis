@@ -205,6 +205,29 @@ Statistical analysis of pitching metrics to detect potential injury warning sign
 
 ---
 
+### 6. [Ohtani Exit Velocity - Random Forest Analysis](./notebooks/ohtani_exit_velocity_random_forest.ipynb)
+
+Predicting exit velocity using scikit-learn Random Forest regression with Statcast data.
+(Statcastデータを用いたscikit-learn Random Forest回帰による打球速度予測)
+
+**Key Findings:**
+- **Plate position (plate_x + plate_z) = 46%** of exit velocity prediction — the most important factor
+- **Pitch speed (release_speed) = only 13%** — nearly uncorrelated (r=0.150)
+- Analyzed 2,865 at-bats from 2025 season
+
+(重要な発見: コース(plate_x + plate_z)が打球速度予測の46%を占め最重要。球速は13%のみでほぼ無相関)
+
+**Analysis Components:**
+- Complete scikit-learn workflow: data preparation → train/test split → model training → evaluation
+- Feature importance analysis with Random Forest
+- Correlation analysis between pitch speed and exit velocity
+
+**Tools:** pybaseball, pandas, scikit-learn (RandomForestRegressor), matplotlib, seaborn
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yasumorishima/mlb-data-analysis/blob/main/notebooks/ohtani_exit_velocity_random_forest.ipynb)
+
+---
+
 ## 🗃️ SQL Version (DuckDB)
 
 Each analysis (except Bauer image analysis) has a **SQL version** demonstrating database query skills.
@@ -236,6 +259,7 @@ mlb-data-analysis/
 │   ├── ohtani_batting_analysis_2022.ipynb    # Batting analysis
 │   ├── mlb_home_run_race_2024.ipynb          # Animation
 │   ├── ohtani_injury_analysis_2023.ipynb     # Injury prediction
+│   ├── ohtani_exit_velocity_random_forest.ipynb # Exit velocity ML
 │   └── sql/                                   # SQL versions (DuckDB)
 │       ├── ohtani_batting_analysis_2022_sql.ipynb
 │       ├── wbc_2023_sandoval_scouting_sql.ipynb
