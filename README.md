@@ -205,7 +205,7 @@ Statistical analysis of pitching metrics to detect potential injury warning sign
 
 ---
 
-### 6. [Ohtani Exit Velocity - Random Forest Analysis](./notebooks/ohtani_exit_velocity_random_forest.ipynb)
+### 6. [Ohtani Exit Velocity - Random Forest Analysis](./notebooks/ohtani_exit_velocity_random_forest.ipynb) | [解説記事](./docs/ohtani_exit_velocity_random_forest.md)
 
 Predicting exit velocity using scikit-learn Random Forest regression with Statcast data.
 (Statcastデータを用いたscikit-learn Random Forest回帰による打球速度予測)
