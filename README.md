@@ -20,7 +20,6 @@ pybaseball + pandas + matplotlib で MLB Statcast データを分析するプロ
 K-meansでグラブ位置の球種別の癖を検出 | PIL, scikit-learn
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yasumorishima/mlb-data-analysis/blob/main/notebooks/bauer_set_position_analysis_2023.ipynb)
 
-![Bauer Set Position Analysis](./docs/image/bauer_set_position.png)
 
 #### 5. 大谷翔平 怪我予兆分析（2023）
 複数パラメーター±2σで投球異常を検出 | pybaseball, numpy
